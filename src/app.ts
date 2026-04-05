@@ -1,7 +1,8 @@
-import path from "path";
-import { fileURLToPath } from "url";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-app.use(express.static(path.join(__dirname, "../../public")));
+app.get("/", (_req, res) => {
+  res.json({
+    message: "Welcome to the Web Scrape Bot API",
+    version: "1.0.0",
+    docs: "/api",
+    health: "/api/healthz",
+  });
+});
