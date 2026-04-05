@@ -1,0 +1,13 @@
+import { Router } from "express";
+import healthRouter from "./health.js";
+import homeRouter from "./home.js";
+import animeRouter from "./anime.js";
+import episodeRouter from "./episode.js";
+import videoRouter from "./video.js";
+const router = Router();
+router.use(healthRouter);
+router.use(homeRouter);
+router.use(animeRouter);
+router.use(episodeRouter);
+router.use(videoRouter);
+export default router;
